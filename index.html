@@ -7,30 +7,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <style>
+    :root {
+      --verde: #28a745;
+      --verde-claro: #dff5e1;
+      --gris-oscuro: #2e3d2f;
+      --blanco: #fff;
+      --texto: #333;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f7fff9;
-      color: #2e3d2f;
+      background-color: var(--verde-claro);
+      color: var(--texto);
     }
- 
+
     header {
       position: relative;
       background: url('Images/banner-nutricion.jpg') center center / cover no-repeat;
-      height: 250px;
+      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
-      overflow: hidden;
     }
 
     header::before {
       content: "";
       position: absolute;
-      top: 0; left: 0;
       width: 100%;
       height: 100%;
       background-color: rgba(0, 100, 0, 0.5);
@@ -43,19 +49,18 @@
     }
 
     .header-content h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin: 0;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
 
     .header-content p {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       margin-top: 10px;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     }
 
     nav {
-      background-color: #2e3d2f;
+      background-color: var(--gris-oscuro);
       text-align: center;
       position: sticky;
       top: 0;
@@ -63,11 +68,12 @@
     }
 
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       padding: 15px 25px;
       display: inline-block;
-      font-weight: 600;
+      font-weight: bold;
+      font-size: 1rem;
       transition: background 0.3s;
     }
 
@@ -76,79 +82,115 @@
     }
 
     section {
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     h2 {
       text-align: center;
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #2e3d2f;
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+      color: var(--gris-oscuro);
     }
 
     .card1 {
       background: white;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      max-width: 800px;
-      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      padding: 35px;
       margin: auto;
-      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     .page-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 35px;
     }
 
     .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       width: 300px;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
     }
 
     .card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 12px;
       margin-bottom: 15px;
     }
 
     .page-title {
-      font-size: 1.4rem;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: var(--gris-oscuro);
     }
 
     .page-price {
-      font-size: 1.1rem;
-      color: #27ae60;
+      font-size: 1.2rem;
+      color: var(--verde);
       font-weight: bold;
       margin: 10px 0;
     }
 
     .page-contact {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #666;
     }
 
+    .btn {
+      display: inline-block;
+      background-color: var(--verde);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+
     footer {
-      background-color: #2e3d2f;
+      background-color: var(--gris-oscuro);
       color: white;
       text-align: center;
-      padding: 20px 0;
-      margin-top: 50px;
+      padding: 25px 0;
+      font-size: 0.9rem;
+    }
+
+    .redes {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 28px;
+      margin-top: 20px;
+    }
+
+    .redes a {
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .redes a:hover {
+      transform: scale(1.2);
     }
   </style>
 </head>
@@ -157,13 +199,13 @@
 <header>
   <div class="header-content">
     <h1>Otterfit Nutrition</h1>
-    <p>Nutrición saludable para una vida más fuerte</p>
+    <p>Nutrición inteligente para un estilo de vida saludable</p>
   </div>
 </header>
 
 <nav>
   <a href="#about">¿Quiénes somos?</a>
-  <a href="#servicios">Planes nutricionales</a>
+  <a href="#servicios">Planes</a>
   <a href="#productos">Productos</a>
   <a href="#contacto">Contacto</a>
 </nav>
@@ -172,60 +214,67 @@
   <h2>¿Quiénes somos?</h2>
   <div class="card1">
     <p>
-      En Otterfit Nutrition nos apasiona la salud y el bienestar. Somos un equipo de especialistas en nutrición dedicados a ofrecer planes alimenticios personalizados, productos naturales y asesoramiento profesional para ayudarte a alcanzar tus metas de salud de forma sostenible y efectiva.
+      En <strong>Otterfit Nutrition</strong> te ayudamos a transformar tu salud con planes personalizados, asesoría profesional y productos naturales. Nuestro equipo de expertos en nutrición está comprometido con tu bienestar, enfocándose en resultados reales, sostenibles y naturales. ¡Súmate al cambio!
     </p>
   </div>
 </section>
 
 <section id="servicios">
-  <h2>Planes nutricionales</h2>
+  <h2>Planes Nutricionales</h2>
   <div class="page-list">
     <div class="card">
       <img src="Images/plan-basico.jpg" alt="Plan Básico">
       <h3 class="page-title">Plan Nutricional Básico</h3>
       <p class="page-price">$499 MXN</p>
-      <p class="page-contact">📞 624-118-1978</p>
+      <p class="page-contact">Incluye guía semanal y consejos personalizados.</p>
+      <a class="btn" href="https://wa.me/526241181978" target="_blank">Solicitar</a>
     </div>
     <div class="card">
       <img src="Images/plan-avanzado.jpg" alt="Plan Avanzado">
-      <h3 class="page-title">Plan Completo + Seguimiento</h3>
+      <h3 class="page-title">Plan Premium + Seguimiento</h3>
       <p class="page-price">$999 MXN</p>
-      <p class="page-contact">📞 624-118-1978</p>
+      <p class="page-contact">Incluye asesoría mensual y chat con nutricionista.</p>
+      <a class="btn" href="https://wa.me/526241181978" target="_blank">Solicitar</a>
     </div>
   </div>
 </section>
 
 <section id="productos">
-  <h2>Productos naturales</h2>
+  <h2>Productos Naturales</h2>
   <div class="page-list">
     <div class="card">
       <img src="Images/proteina.jpg" alt="Proteína Vegana">
       <h3 class="page-title">Proteína Vegana</h3>
       <p class="page-price">$750 MXN</p>
-      <p class="page-contact">🌿 100% natural</p>
+      <p class="page-contact">🌱 Sin azúcar, sabor natural.</p>
     </div>
     <div class="card">
       <img src="Images/multivitaminico.jpg" alt="Multivitamínicos">
       <h3 class="page-title">Multivitamínicos</h3>
       <p class="page-price">$399 MXN</p>
-      <p class="page-contact">💊 Refuerza tus defensas</p>
+      <p class="page-contact">💊 Refuerza tu sistema inmune.</p>
     </div>
   </div>
 </section>
 
 <section id="contacto">
   <h2>Contacto</h2>
-  <p style="text-align:center;">📞 Tel: 624-118-1978<br>📧 Email: otterfit@gmail.com<br>📍 Los Cabos, B.C.S.</p>
+  <div class="card1">
+    <p>📞 Tel: <strong>624-118-1978</strong><br>
+    📧 Email: <strong>otterfit@gmail.com</strong><br>
+    📍 Los Cabos, B.C.S.</p>
+    <a class="btn" href="https://wa.me/526241181978" target="_blank">Enviar mensaje por WhatsApp</a>
+  </div>
 </section>
 
-<section id="redes-sociales" style="padding: 50px 20px; background-color: #2e3d2f; color: white; text-align: center;">
-  <h2 style="font-size: 2rem; margin-bottom: 10px;">Redes Sociales</h2>
-  <p style="font-size: 1rem;">Síguenos para más tips y promociones</p>
-  <div style="margin-top: 25px; display: flex; justify-content: center; gap: 30px; font-size: 28px;">
-    <a href="https://www.facebook.com/otterfit" target="_blank" style="color: #3b5998;"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.instagram.com/otterfit" target="_blank" style="color: #e4405f;"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@otterfit" target="_blank" style="color: #000000;"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.linkedin.com/in/otterfit" target="_blank" style="color: #0077b5;"><i class="fab fa-linkedin"></i></a>
+<section id="redes-sociales" style="background-color: #28a745; color: white; text-align: center;">
+  <h2>Síguenos en redes</h2>
+  <p>Consejos diarios, recetas y promociones exclusivas</p>
+  <div class="redes">
+    <a href="https://facebook.com/otterfit" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com/otterfit" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://tiktok.com/@otterfit" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://linkedin.com/in/otterfit" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
 </section>
 
